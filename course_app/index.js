@@ -21,6 +21,10 @@ async function loginAcces() {
   let email = document.querySelector("#login_email");
   let pass = document.querySelector("#login_password");
   console.log(email.value);
+  if (!email.value || !pass.value) {
+    console.log("neka gresksa vladiacije");
+    return;
+  }
   try {
     let response = await axios.post(BASE_URL, {
       email: email.value,
