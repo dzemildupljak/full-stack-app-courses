@@ -12,11 +12,7 @@ async function getMockData() {
     console.log(error);
   }
 }
-loginBtn.addEventListener("click", (e) => {
-  console.log("radi");
-  e.preventDefault();
-  loginAcces();
-});
+
 async function loginAcces() {
   let email = document.querySelector("#login_email");
   let pass = document.querySelector("#login_password");
@@ -32,11 +28,15 @@ async function loginAcces() {
   }
 }
 
-// regBtn.addEventListener("click", function (e) {
-//   e.preventDefault();
-//   modal.style.display = "block";
-// });
-// closeBtn.addEventListener("click", function (e) {
-//   e.preventDefault();
-//   modal.style.display = "none";
-// });
+loginBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  loginAcces();
+});
+regBtn.addEventListener("click", function (e) {
+  e.preventDefault();
+  modal.style.display = "block";
+});
+closeBtn.addEventListener("click", function (e) {
+  e.preventDefault();
+  modal.style.display = "none";
+});
