@@ -25,6 +25,27 @@ app.get("/mock-data", (_, res) => {
   });
 });
 
+app.get("/login", (req, res) => {
+  res.sendFile(path.join(intialPath, "index.html"));
+});
+app.post("/login-user", (req, res) => {
+  const { email, password } = req.body;
+
+  db.select("name", "email")
+    .from("users")
+    .where({
+      email: email,
+      password: password,
+    })
+    .then((data) => {
+      if (data.length) {
+        res.json(data[0]);
+      } else {
+        res.json("email or password is incorrect");
+      }
+    });
+});
+
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
 });

@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+.login_container {
+  max-width: 300px;
+  background-color: #aeaeae;
+  padding: 20px;
+}
+form div {
+  padding: 10px 0;
+}
+form div label {
+  display: block;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+form div input {
+  height: 30px;
+  width: 100%;
+  font-size: 16px;
+  padding: 0 5px;
+}
+
+form div button {
+  cursor: pointer;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+.custom-modal {
+  display: none;
+  background-color: darkslategray;
+  max-width: 600px;
+  margin: auto;
+  padding: 40px;
+  position: absolute;
+  top: 10%;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+
+#closeModal {
+  height: 20px;
+  width: 20px;
+  color: white;
+  background-color: darkslategray;
+  border: none;
+  font-size: 25px;
+  font-weight: bold;
+  position: absolute;
+  right: 30px;
+  top: 30px;
+}
